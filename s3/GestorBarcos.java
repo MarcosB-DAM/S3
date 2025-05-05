@@ -16,20 +16,6 @@ public class GestorBarcos {
         this.submarinos = new ArrayList<>();
         this.tablero_barcos = new String[8][8];
         this.tablero_submarino = new String[8][8];
-
-
-        for (int i=0; i<8; i++) {
-            for (int j=0; j<8; j++) {
-                tablero_barcos[i][j] = "~";
-            }
-        }
-
-        for (int i=0; i<8; i++) {
-            for (int j=0; j<8; j++) {
-                tablero_submarino[i][j] = "-";
-            }
-        }
-
     }
     public ArrayList<Submarino> getSubmarinos() {
         return submarinos;
@@ -372,4 +358,5 @@ public class GestorBarcos {
         System.out.println("Se lanzó un misil al agua");
         return false;
     }
+
 }

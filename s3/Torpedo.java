@@ -73,7 +73,6 @@ public class Torpedo {
                     }
                 }
                 return true;
-
             }
             else {
                 System.out.println("Se disparará un torpedo a la una columna");
@@ -81,9 +80,9 @@ public class Torpedo {
                 columna = teclado.nextInt();
                 System.out.println("¿Estás seguro que quieres lanzar el torpedo en la columna " + columna + "?");
                 confirmColumna = teclado.nextInt();
-                for (boolean estado : s.estado_barco){
-                    if (s.columna == columna){
-                        estado = false;
+                for (int i = 0; i < s.estado_barco.length; i++) {
+                    if (s.getFila() == fila){
+                        s.estado_barco[i] = false;
                     }
                 }
                 return true;

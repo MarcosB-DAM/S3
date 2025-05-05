@@ -42,7 +42,7 @@ public class Misil {
     }
     public int[] lanzarMisil(){
         int opcion;
-        int contadorVeces = 0;
+        boolean misil3x3Usado = false;
         inventario();
         System.out.println("============");
         System.out.println("Lanzar misil");
@@ -54,11 +54,10 @@ public class Misil {
                 System.out.println("Se lanzará un misil de 1x1 casillas");
             }
             else if (opcion == 2){
-                if (contadorVeces == 0){
+                if (!misil3x3Usado){
                     System.out.println("Se lanzará un misil de 3x3 casillas");
-                    contadorVeces++;
-                }
-                else {
+                    misil3x3Usado = true;
+                } else {
                     System.out.println("ERROR: No se puede lanzar misil de 3x3 casillas");
                 }
             }

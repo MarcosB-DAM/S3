@@ -16,6 +16,13 @@ public class Barco {
         this.columna = columna;
         this.orientacion = orientacion;
     }
+    public Barco(int tamaño){
+        this.tamaño = tamaño;
+        this.orientacion = orientacion;
+        this.estado_barco = new boolean[tamaño];
+        this.fila = fila;
+        this.columna = columna;
+    }
 
     public int getTamaño() {
         return tamaño;
